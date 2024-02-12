@@ -36,8 +36,9 @@ class _ReviewsScreenState extends State<ReviewsScreen> {
               child: Padding(
                 padding: const EdgeInsets.all(12.0),
                 child: ListView.separated(
-                  itemCount: 5,
+                  itemCount:reviewListController.reviewListModel.reviewListItem?.length??0,
                   itemBuilder: (context, index) {
+                    var des=reviewListController.reviewListModel.reviewListItem?[index].description??'';
                     return Card(
                       child: Padding(
                         padding: const EdgeInsets.all(5.0),
@@ -50,8 +51,8 @@ class _ReviewsScreenState extends State<ReviewsScreen> {
                                 const SizedBox(
                                   width: 5,
                                 ),
-                                const Text(
-                                  'Limon Paul Argo',
+                                 Text(
+                                  des,
                                   style: TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.w400),
