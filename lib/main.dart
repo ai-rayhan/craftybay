@@ -5,3 +5,4 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(const CraftyBay());
 }
+//28.4 gb
